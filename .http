@@ -1,0 +1,33 @@
+# This is my '.rest' file. For some reason, the REST client only works if the filetype is .http
+
+# local requests
+
+GET http://localhost:3000/equipment HTTP/1.1
+
+
+###
+
+GET http://localhost:3000/equipment/64091331aac4f7d6759ccf1b HTTP/1.1
+
+###
+
+POST http://localhost:3000/equipment/ HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Candle",
+  "games": [
+    "The Legend of Zelda",
+    "The Adventure of Link"
+  ],
+  "locations": [
+    {
+      "game": "The Legend of Zelda",
+      "location": "Item Shop"
+    },
+    {
+      "game": "The Adventure of Link",
+      "location": "Parapa Palace"
+    }
+  ]
+}

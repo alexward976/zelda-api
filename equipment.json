@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Sword",
+        "games": [
+            "The Legend of Zelda",
+            "Breath of the Wild"
+        ],
+        "locations": [
+            {
+                "game": "The Legend of Zelda",
+                "location": "Starting Screen cave"
+            },
+            {
+                "game": "Breath of the Wild",
+                "location": "amiibo"
+            }
+        ]
+    },
+    {
+        "name": "White Sword",
+        "games": [
+            "The Legend of Zelda",
+            "The Minish Cap",
+            "Hyrule Warriors"
+        ],
+        "locations": [
+            {
+                "game":"The Legend of Zelda",
+                "location": "In a cave on top of the waterfall near the Lost Hills"
+            },
+            {
+                "game":"The Minish Cap",
+                "location": "Elemental Sanctuary"
+            }
+        ]
+    },
+    {
+        "name": "Wooden Shield",
+        "games": [
+            "The Legend of Zelda",
+            "Twilight Princess",
+            "Phantom Hourglass",
+            "Skyward Sword",
+            "Breath of the Wild"
+        ],
+        "locations": [
+            {
+                "game": "Twilight Princess",
+                "location": "Malo Mart"
+            },
+            {
+                "game": "Phantom Hourglass",
+                "location": "Mercay Island"
+            },
+            {
+                "game": "Skyward Sword",
+                "location": "Instructor Owlan"
+            },
+            {
+                "game": "Breath of the Wild",
+                "location": "Hyrule Field"
+            }
+        ]
+    }
+]
