@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Zelda Api",
-    "description": "An API built about the Zelda game that started it all. Uses CRUD operations on a MongoDB collection. To start, this API only deals with the equipment Link aquires throughout the game",
+    "description": "An API built about the Zelda game that started it all. Uses CRUD operations on a MongoDB collection. To start, this API only deals with the equipment Link aquires throughout the game.",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
@@ -11,16 +11,9 @@
     "http"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
     "/equipment/": {
       "get": {
-        "description": "",
+        "description": "Returns the complete MongoDB collection of Zelda 1 equipment.",
         "produces": [
           "application/json"
         ],
@@ -32,7 +25,7 @@
         }
       },
       "post": {
-        "description": "",
+        "description": "Add a new item to the equipment collection. See the example model below for object structure.",
         "parameters": [
           {
             "name": "body",
@@ -40,9 +33,28 @@
             "schema": {
               "type": "object",
               "properties": {
-                "_id": {
-                  "example": "any"
+                "name": {
+                  "example": "Name of Item"
+                },
+                "games": {
+                  "example": [
+                    "Game 1",
+                    "Game 2"
+                  ]
+                },
+                "locations": {
+                  "example": [
+                    {
+                      "game": "Game 1",
+                      "location": "Where the item is obtained"
+                    },
+                    {
+                      "game": "Game 2",
+                      "location":"Where the item is obtained"
+                    }
+                  ]
                 }
+                
               }
             }
           }
@@ -56,7 +68,7 @@
     },
     "/equipment/{id}": {
       "get": {
-        "description": "",
+        "description": "Returns (if exists) the item object with the corresponding id.",
         "produces": [
           "application/json"
         ],
