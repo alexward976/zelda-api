@@ -32,6 +32,39 @@ content-type: application/json
   ]
 }
 
+
+###
+
+
+DELETE http://localhost:3000/equipment/64127d06d2a9dac825609a23 HTTP/1.1
+
+
+
+###
+
+
+PUT http://localhost:3000/equipment/6412a265ed04f0d0eedaef01 HTTP/1.1
+content-type: application/json
+
+{
+  "name": 2,
+  "games": [
+    "The Legend of Zelda",
+    "The Adventure of Link"
+  ],
+  "locations": [
+    {
+      "game": "The Legend of Zelda",
+      "location": "Item Shop"
+    },
+    {
+      "game": "The Adventure of Link",
+      "location": "Parapa Palace"
+    }
+  ]
+}
+
+###
 # Render requests
 
 GET https://zelda-api.onrender.com/equipment HTTP/1.1

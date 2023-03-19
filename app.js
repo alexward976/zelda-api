@@ -12,6 +12,11 @@ app
   .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc))
   .use("/", require("./routes"));
 
+
+process.on('uncaughtException', (err, origin) => {
+  console.log(process.stderr.fd, `Caught exception: ${err}\n` + `Exception origin: ${origin}`);
+});
+
 mongodb.initDb((err, mongodb) => {
   if (err) {
     console.log(err);
@@ -20,4 +25,3 @@ mongodb.initDb((err, mongodb) => {
     console.log(`Connected to DB and listening on ${port}`);
   }
 });
-
